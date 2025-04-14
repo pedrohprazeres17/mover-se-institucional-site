@@ -6,34 +6,35 @@ import {
   SheetContent,
   SheetTrigger,
 } from "./ui/sheet";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menuItems = [
-    { title: "Início", href: "#home" },
-    { title: "Sobre", href: "#about" },
-    { title: "Atividades", href: "#activities" },
-    { title: "Calendário", href: "#calendar" },
-    { title: "Depoimentos", href: "#testimonials" },
-    { title: "Contato", href: "#contact" },
+    { title: "Início", href: "/" },
+    { title: "Sobre", href: "/sobre" },
+    { title: "Atividades", href: "/atividades" },
+    { title: "Calendário", href: "/calendario" },
+    { title: "Depoimentos", href: "/depoimentos" },
+    { title: "Contato", href: "/contato" },
   ];
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold gradient-text">
+        <Link to="/" className="text-2xl font-bold gradient-text">
           Mover-se
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item.title}
-              href={item.href}
+              to={item.href}
               className="text-gray-600 hover:text-primary transition-colors"
             >
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -47,13 +48,13 @@ const Navbar = () => {
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.title}
-                  href={item.href}
+                  to={item.href}
                   className="text-lg text-gray-600 hover:text-primary transition-colors"
                 >
                   {item.title}
-                </a>
+                </Link>
               ))}
             </div>
           </SheetContent>
