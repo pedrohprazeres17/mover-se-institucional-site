@@ -1,7 +1,8 @@
 
 import { 
-  Yoga, 
-  Running, 
+  Activity, 
+  HeartPulse, 
+  Footprints,
   Gamepad2, 
   Dices,
   Music
@@ -12,17 +13,17 @@ const activities = [
   {
     title: "Yoga",
     description: "Práticas de yoga para equilíbrio corpo e mente",
-    icon: Yoga,
+    icon: Activity,
   },
   {
     title: "Alongamento e Mobilidade",
     description: "Exercícios para melhorar a flexibilidade e mobilidade",
-    icon: Yoga,
+    icon: HeartPulse,
   },
   {
     title: "Caminhada e Corrida",
     description: "Grupo de corrida e caminhada ao ar livre",
-    icon: Running,
+    icon: Footprints,
   },
   {
     title: "Jogos Recreativos",
