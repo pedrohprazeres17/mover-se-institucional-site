@@ -20,7 +20,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate('/contato');
+    navigate('/cadastro');
   };
 
   return (
