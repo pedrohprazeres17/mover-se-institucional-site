@@ -1,4 +1,3 @@
-
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "./ui/carousel";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
@@ -55,7 +54,15 @@ const Hero = () => {
             </Button>
           </div>
           <div className="flex-1">
-            <Carousel className="w-full max-w-xl mx-auto">
+            <Carousel className="w-full max-w-xl mx-auto" opts={{
+              align: "start",
+              loop: true,
+              active: true,
+              dragFree: true,
+              duration: 3000,
+              skipSnaps: false,
+              startIndex: 0,
+            }}>
               <CarouselContent>
                 {bannerImages.map((image, index) => (
                   <CarouselItem key={index}>
