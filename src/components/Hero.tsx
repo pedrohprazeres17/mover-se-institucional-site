@@ -54,15 +54,28 @@ const Hero = () => {
             </Button>
           </div>
           <div className="flex-1">
-            <Carousel className="w-full max-w-xl mx-auto" opts={{
-              align: "start",
-              loop: true,
-              active: true,
-              dragFree: true,
-              duration: 3000,
-              skipSnaps: false,
-              startIndex: 0,
-            }}>
+            <Carousel 
+              className="w-full max-w-xl mx-auto" 
+              opts={{
+                align: "start",
+                loop: true,
+                dragFree: true,
+                skipSnaps: false,
+                startIndex: 0,
+                watchDrag: false,
+                duration: 3000,
+                watchResize: true,
+                inViewThreshold: 1,
+                breakpoints: {
+                  "(min-width: 768px)": { active: true },
+                },
+                autoplay: {
+                  delay: 3000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
+                }
+              }}
+            >
               <CarouselContent>
                 {bannerImages.map((image, index) => (
                   <CarouselItem key={index}>
