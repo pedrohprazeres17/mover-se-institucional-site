@@ -1,3 +1,4 @@
+
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "./ui/carousel";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
@@ -6,24 +7,12 @@ import { useNavigate } from "react-router-dom";
 
 const bannerImages = [
   {
-    url: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-    alt: "Estudante usando laptop"
+    url: "/lovable-uploads/5c3c58f3-f5e1-455c-965c-f27a8303c16b.png",
+    alt: "Projeto Mover-se"
   },
   {
-    url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    alt: "Laptop em uma mesa"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    alt: "Estudante estudando"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-    alt: "Ambiente relaxante"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    alt: "Natureza e bem-estar"
+    url: "/lovable-uploads/b925a13c-5ed5-4cdb-84e6-62a2f0008c58.png",
+    alt: "FAE Runners"
   }
 ];
 
@@ -66,14 +55,6 @@ const Hero = () => {
                 duration: 3000,
                 watchResize: true,
                 inViewThreshold: 1,
-                breakpoints: {
-                  "(min-width: 768px)": { active: true },
-                },
-                autoplay: {
-                  delay: 3000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: true,
-                }
               }}
             >
               <CarouselContent>
@@ -83,7 +64,7 @@ const Hero = () => {
                       <img
                         src={image.url}
                         alt={image.alt}
-                        className="w-full h-64 object-cover"
+                        className="w-full h-64 object-contain bg-white"
                       />
                     </Card>
                   </CarouselItem>
